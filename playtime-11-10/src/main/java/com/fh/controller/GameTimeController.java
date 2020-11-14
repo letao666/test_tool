@@ -18,6 +18,12 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("game")
 public class GameTimeController {
 
+    public static void main(String[] args) {
+        System.out.println("1111");
+    }
+
+
+
     @Autowired
     private GameTimeService gameTimeService;
 
