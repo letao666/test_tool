@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fh.mapper.GameTimeMapper">
+
+    <!--批量新增-->
+    <insert id="addBatchGame" >
+        insert into t_game_time(gameName,beginTime,endTime,userName,card) values
+            <foreach collection="list" item="item" separator="," >
+                (#{item.gameName},#{item.beginTime},#{item.endTime},#{item.userName},#{item.card})
+            </foreach>
+    </insert>
+</mapper>
