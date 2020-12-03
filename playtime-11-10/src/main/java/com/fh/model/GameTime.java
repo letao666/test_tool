@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
-@TableName("t_game_time")
+@TableName("t_game")
 public class GameTime {
     @TableId(type = IdType.AUTO)
     private Integer id;
